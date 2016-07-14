@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
+
   <head>
-    <title>epic-element demo</title>
+    <title>epic-styles demo</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
@@ -9,23 +10,91 @@
     <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
     <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
 
-    <link rel="import" href="../epic-element.html">
+    <link rel="import" href="../epic-styles.html">
 
 
 
     <style is="custom-style" include="demo-pages-shared-styles">
+    :root{
+        --demo-snippet-demo: {
+            padding:0;
+            padding-top: var(--epic-padding);
+        }
+    }
+    .vertical-section-container{
+
+    }
     </style>
+
   </head>
+
   <body>
 
     <div class="vertical-section-container">
-      <h3>Basic epic-element Demo</h3>
+      <h3>Basic epic-styles Demo</h3>
       <demo-snippet>
+
         <template>
-          <epic-element></epic-element>
+          <!-- include the shared styles -->
+          <style is="custom-style" include="epic-styles"></style>
+
+          <div class="container">
+            <div class="content epic-grid">
+              <div>
+
+
+                <h3><a id="Typewriter_delectus_cred_2"></a>Typewriter delectus cred</h3>
+                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney’s minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic.
+                  Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
+              </div>
+              <div>
+
+
+                <h2><a id="Typewriter_delectus_cred_2"></a>Typewriter delectus cred</h2>
+                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney’s minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic.
+                  Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
+              </div>
+            </div>
+          </div>
         </template>
+
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container">
+      <h3>Basic epic-styles Demo</h3>
+      <demo-snippet>
+
+        <template>
+          <!-- include the shared styles -->
+          <style is="custom-style" include="epic-styles"></style>
+
+          <div class="gridlover-grid">
+            <div>
+
+
+              <h1><a id="Kitsch_retro_0"></a>Kitsch retro is so awesome</h1>
+              <h2><a id="Typewriter_delectus_cred_2"></a>Typewriter delectus cred</h2>
+              <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney’s minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic.
+                Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
+              <h3><a id="Truffaut_disrupt_sartorial_deserunt_6"></a>Truffaut disrupt sartorial deserunt</h3>
+              <p>Cosby sweater plaid shabby chic kitsch pour-over ex. Try-hard fanny pack mumblecore cornhole cray scenester. Assumenda narwhal occupy, Blue Bottle nihil culpa fingerstache. Meggings kogi vinyl meh, food truck banh mi Etsy magna 90’s duis
+                typewriter banjo organic leggings Vice.</p>
+              <h4><a id="Fingerstache_nesciunt_lomo_nostrud_hoodie_10"></a>Fingerstache nesciunt lomo nostrud hoodie</h4>
+              <ul>
+                <li>Roof party put a bird on it incididunt sed umami craft beer cred.</li>
+                <li>Carles literally normcore, Williamsburg Echo Park fingerstache photo booth twee keffiyeh chambray whatever.</li>
+                <li>Scenester High Life Banksy, proident master cleanse tousled squid sriracha ad chillwave post-ironic retro.</li>
+              </ul>
+              <p>Laboris selfies occaecat umami, forage Tumblr American Apparel. Retro Terry Richardson culpa id swag polaroid Intelligentsia American Apparel eu, esse non post-ironic fugiat master cleanse. Direct trade gluten-free blog, fanny pack cray
+                labore skateboard before they sold out adipisicing non magna id Helvetica freegan. Disrupt aliqua Brooklyn church-key lo-fi dreamcatcher.</p>
+            </div>
+          </div>
+        </template>
+
       </demo-snippet>
     </div>
 
   </body>
+
 </html>

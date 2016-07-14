@@ -1,0 +1,114 @@
+<dom-module id="epic-typography">
+  <template>
+    <style>
+    html{
+        font-size: var(--epic-base);
+    }
+
+    body {
+        font-family: Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: var(--epic-base-font-size);
+        line-height: var(--epic-base-line-height);
+        padding: var(--epic-base-line-height);
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size-4);
+        line-height: var(--epic-base-line-height-4);
+        margin-top:  0;
+        margin-bottom: var(--epic-base-line-height);
+    }
+
+    h2 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size-3);
+        line-height: var(--epic-base-line-height-4);
+        margin-top: var(--epic-base-line-height);
+        margin-bottom: var(--epic-base-line-height);
+    }
+
+    h3 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size-2);
+        line-height: var(--epic-base-line-height-3);
+        margin-top: var(--epic-base-line-height);
+        margin-bottom: var(--epic-base-line-height);
+    }
+
+    h4 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size);
+        line-height: var(--epic-base-line-height);
+        margin-top: var(--epic-base-line-height);
+        margin-bottom: 0;
+    }
+
+    h5 {
+        font-family: inherit;
+        font-weight: 400;
+        font-style: italic;
+        font-size: var(--epic-base-font-size);
+        line-height: var(--epic-base-line-height);
+        margin-top: var(--epic-base-line-height);
+        margin-bottom: 0;
+    }
+
+    p,ul,ol,pre,table,blockquote {
+        margin-top: 0;
+        margin-bottom:  var(--epic-base-line-height);
+    }
+
+    ul ul,ol ol,ul ol,ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    hr {
+        border: 1px solid;
+        margin: -1px 0;
+    }
+
+    b,strong,em,small,code {
+        line-height: 1;
+    }
+
+    sup {
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+        top: -.5em;
+    }
+
+    sub {
+        bottom: -.25em;
+    }
+
+    a {
+        color: #268ED9;
+    }
+
+    .gridlover-grid {
+        background-image: linear-gradient(to bottom,hsla(200,100%,50%,.3) 1px,transparent 1px);
+        background-position: left -1px;
+        background-repeat: repeat;
+        background-size:  var(--epic-base-line-height)  var(--epic-base-line-height);
+    }
+
+    .gridlover-grid body {
+        box-shadow: 1px 0 0 hsla(200,100%,50%,.3),-1px 0 0 hsla(200,100%,50%,.3);
+    }
+    </style>
+  </template>
+</dom-module>

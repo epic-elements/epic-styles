@@ -1,6 +1,6 @@
-# \<epic-element\>
+# \<epic-styles\>
 
-starter for epic-elements
+starter for epic-styless
 
 ## Install the Polymer-CLI
 

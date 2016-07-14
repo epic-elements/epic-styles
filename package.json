@@ -1,7 +1,7 @@
 {
-  "name": "@mjleitch/epic-element",
+  "name": "@mjleitch/epic-styles",
   "version": "1.0.0",
-  "description": "",
+  "description": "starter for epic-styless",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,5 +22,16 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-vulcanize": "^6.1.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epic-elements/epic-styles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/epic-elements/epic-styles/issues"
+  },
+  "homepage": "https://github.com/epic-elements/epic-styles#readme"
 }

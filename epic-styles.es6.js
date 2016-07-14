@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  class EpicElement {
+  class EpicStyles {
 
       // Define behaviors with a getter.
     get behaviors() {
@@ -8,7 +8,7 @@
     }
 
     beforeRegister() {
-      this.is = 'epic-element';
+      this.is = 'epic-styles';
       this.properties = {};
       this.observers = [];
       this.listeners = {
@@ -25,5 +25,5 @@
 
 
   // Register the element using Polymer's constructor.
-  Polymer(EpicElement);
+  Polymer(EpicStyles);
 })();
