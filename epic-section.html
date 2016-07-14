@@ -1,0 +1,134 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-resizable-behavior/iron-resizable-behavior.html">
+<link rel="import" href="../iron-media-query/iron-media-query.html">
+<link rel="import" href="../epic-rx/epic-rx.html">
+
+<dom-module id="epic-section">
+<template>
+    <style>
+      :host {
+        display: block;
+        box-sizing: border-box;
+        font-size: 1rem;
+        margin:0;
+        padding:0;
+
+        @apply(--epic-section);
+
+        --epic-section-spacing: .75em;
+        --epic-section-max-width: 1280px;
+      }
+
+      :host * {
+        box-sizing: border-box;
+      }
+
+      .container {
+          display: block;
+          margin:0 auto;
+          padding:0;
+          padding-left: var(--epic-section-spacing);
+          padding-right: var(--epic-section-spacing);
+
+          @apply(--epic-section-container);
+      }
+
+      .content {
+          display: block;
+          margin:0;
+          padding:calc(var(--epic-section-spacing)/2) 0 calc(var(--epic-section-spacing)/2);
+
+          @apply(--epic-section-content);
+      }
+
+      :host[contain] .content {
+          max-width: var(--epic-section-max-width);
+      }
+
+      .header,
+      .body,
+      .footer {
+          margin:0;
+          padding:0;
+          padding:calc(var(--epic-section-spacing)/4) 0 calc(var(--epic-section-spacing)/4);
+      }
+
+      .header {
+          @apply(--epic-section-header);
+      }
+      .body {
+          @apply(--epic-section-body);
+      }
+      .footer {
+          @apply(--epic-section-footer);
+      }
+
+      .header ::content > *:first-child,
+      .body ::content > *:first-child,
+      .footer ::content > *:first-child {
+          margin-top:0;
+          padding-top:0;
+      }
+
+      .header ::content > *:last-child,
+      .body ::content > *:last-child,
+      .footer ::content > *:last-child {
+          margin-bottom:0;
+          padding-bottom:0;
+      }
+
+    @media (min-width: 360px) {}
+    @media (min-width: 400px) {}
+    @media (min-width: 480px) {
+        :host {
+          --epic-section-spacing: 1.5em;
+        }
+    }
+    @media (min-width: 600px) {}
+    @media (min-width: 720px) {}
+    @media (min-width: 840px) {}
+    @media (min-width: 960px) {}
+    @media (min-width: 1024px) {
+        :host {
+          --epic-section-spacing: 3em;
+        }
+    }
+    @media (min-width: 1280px) {}
+    @media (min-width: 1440px) {
+        :host {
+          --epic-section-spacing: 6em;
+        }
+    }
+    @media (min-width: 1600px) {}
+    @media (min-width: 720px) {}
+    @media (min-width: 1920px) {}
+    @media (min-width: 600px) {}
+
+    </style>
+
+    <iron-media-query query="(min-width: 480px)" query-matches="{{queryMatches}}"></iron-media-query>
+    <iron-media-query query="(min-width: 1024px)" query-matches="{{queryMatches}}"></iron-media-query>
+    <iron-media-query query="(min-width: 1440px)" query-matches="{{queryMatches}}"></iron-media-query>
+
+
+    <div id="container" class="container">
+        <div id="content" class="content">
+            <header id="header" class="header">
+                <content select="*[epic-title]"></content>
+                <content select="*[epic-subtitle]"></content>
+                <content select="*[epic-intro]"></content>
+                <content select="*[header], *[epic-header] > *, header > *"></content>
+            </header>
+            <section id="body" class="body">
+                <content></content>
+            </section>
+            <template is="dom-if" if="[[_hasFooterItems()]]">
+                <footer id="footer" class="footer">
+                    <content select="*[footer], footer > *"></content>
+                </footer>
+            </template>
+        </div>
+    </div>
+</template>
+</dom-module>
+<script src="epic-section.js"></script>
