@@ -1,11 +1,11 @@
 {
   "name": "epic-element",
+  "description": "starter for epic-elements",
   "main": "epic-element.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
-    "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#^1.0.3",
-    "iron-media-query": "PolymerElements/iron-media-query#^1.0.8",
-    "epic-rx": "epic-elements/epic-rx"
+    "core.js": "^2.4.0",
+    "epic-polyfills": "epic-elements/epic-polyfills"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
