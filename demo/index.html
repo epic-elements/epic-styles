@@ -17,83 +17,119 @@
     <style is="custom-style" include="demo-pages-shared-styles">
     :root{
         --demo-snippet-demo: {
-            padding:0;
-            padding-top: var(--epic-padding);
+            /*padding:0;*/
+            /*padding-top: var(--epic-padding);*/
         }
-    }
-    .vertical-section-container{
 
-    }
+
+
+}
+
+    </style>
+
+    <style is="custom-style" include="epic-styles">
+.epic-grid {
+    @apply(--epic-grid);
+}
+
+.epic-grid-3 > * {
+    text-align:center;
+    @apply(--epic-grid-box-span-1of3);
+}
+
+.epic-grid-3 > .epic-grid-box-span-2 {
+    text-align:center;
+    @apply(--epic-grid-box-span-2of3);
+}
+
+.epic-grid > * > * {
+    @apply(--epic-grid-box-content);
+}
+
+.epic-grid-span-1of2 {
+    @apply(--epic-grid-box-span-1of2);
+}
+
+epic-grid-box-span-2
     </style>
 
   </head>
 
   <body>
-
-    <div class="vertical-section-container">
-      <h3>Basic epic-styles Demo</h3>
-      <demo-snippet>
-
-        <template>
-          <!-- include the shared styles -->
-          <style is="custom-style" include="epic-styles"></style>
-
-          <div class="container">
-            <div class="content epic-grid">
-              <div>
+      <div class="vertical-section-container">
+        <h3>Basic epic-styles Demo</h3>
+        <demo-snippet>
 
 
-                <h3><a id="Typewriter_delectus_cred_2"></a>Typewriter delectus cred</h3>
-                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney’s minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic.
-                  Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
-              </div>
-              <div>
-
-
-                <h2><a id="Typewriter_delectus_cred_2"></a>Typewriter delectus cred</h2>
-                <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney’s minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic.
-                  Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
-              </div>
+          <template>
+            <!-- include the shared styles -->
+            <!-- /*<style is="custom-style" include="epic-styles"></style>*/ -->
+            <div class="gridlover-grid">
+            <div id="container" class="container">
+                <div id="content" class="content">
+                    <header id="header" class="header">
+                        <h1>Prize Categories</h1>
+                        <p>Six lucky cyclists will win ZEAL sunglases from the below categories.</p>
+                    </header>
+                    <section id="body" class="epic-grid">
+                        <div class="epic-grid-span-1of2">
+                            <ol>
+                                <li>MOST MILES COVERED CYCLING - MALE. As logged via Strava, through competition’s Strava Club</li>
+                                <li>MOST MILES COVERED CYCLING - MALE. As logged via Strava, through competition’s Strava Club</li>
+                                <li>MOST MILES COVERED CYCLING - MALE. As logged via Strava, through competition’s Strava Club</li>
+                            </ol>
+                        </div>
+                        <div class="epic-grid-span-1of2">
+                            <ol start="4">
+                                <li>MOST MILES COVERED CYCLING - MALE. As logged via Strava, through competition’s Strava Club</li>
+                                <li>MOST MILES COVERED CYCLING - MALE. As logged via Strava, through competition’s Strava Club</li>
+                                <li>MOST MILES COVERED CYCLING - MALE. As logged via Strava, through competition’s Strava Club</li>
+                            </ol>
+                        </div>
+                    </section>
+                </div>
             </div>
-          </div>
-        </template>
-
-      </demo-snippet>
-    </div>
-
-    <div class="vertical-section-container">
-      <h3>Basic epic-styles Demo</h3>
-      <demo-snippet>
-
-        <template>
-          <!-- include the shared styles -->
-          <style is="custom-style" include="epic-styles"></style>
-
-          <div class="gridlover-grid">
-            <div>
-
-
-              <h1><a id="Kitsch_retro_0"></a>Kitsch retro is so awesome</h1>
-              <h2><a id="Typewriter_delectus_cred_2"></a>Typewriter delectus cred</h2>
-              <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis Carles pickled, cornhole Thundercats McSweeney’s minim PBR vegan Tumblr irony. Kogi eu Thundercats, sed scenester before they sold out et aesthetic.
-                Elit cred Vice ethical pickled sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
-              <h3><a id="Truffaut_disrupt_sartorial_deserunt_6"></a>Truffaut disrupt sartorial deserunt</h3>
-              <p>Cosby sweater plaid shabby chic kitsch pour-over ex. Try-hard fanny pack mumblecore cornhole cray scenester. Assumenda narwhal occupy, Blue Bottle nihil culpa fingerstache. Meggings kogi vinyl meh, food truck banh mi Etsy magna 90’s duis
-                typewriter banjo organic leggings Vice.</p>
-              <h4><a id="Fingerstache_nesciunt_lomo_nostrud_hoodie_10"></a>Fingerstache nesciunt lomo nostrud hoodie</h4>
-              <ul>
-                <li>Roof party put a bird on it incididunt sed umami craft beer cred.</li>
-                <li>Carles literally normcore, Williamsburg Echo Park fingerstache photo booth twee keffiyeh chambray whatever.</li>
-                <li>Scenester High Life Banksy, proident master cleanse tousled squid sriracha ad chillwave post-ironic retro.</li>
-              </ul>
-              <p>Laboris selfies occaecat umami, forage Tumblr American Apparel. Retro Terry Richardson culpa id swag polaroid Intelligentsia American Apparel eu, esse non post-ironic fugiat master cleanse. Direct trade gluten-free blog, fanny pack cray
-                labore skateboard before they sold out adipisicing non magna id Helvetica freegan. Disrupt aliqua Brooklyn church-key lo-fi dreamcatcher.</p>
             </div>
-          </div>
-        </template>
+          </template>
 
-      </demo-snippet>
-    </div>
+        </demo-snippet>
+
+
+      <div class="vertical-section-container">
+        <h3>Basic epic-styles Demo</h3>
+        <demo-snippet>
+
+
+          <template>
+            <!-- include the shared styles -->
+            <!-- /*<style is="custom-style" include="epic-styles"></style>*/ -->
+            <div class="gridlover-grid">
+            <div id="container" class="container">
+                <div id="content" class="content">
+                    <header id="header" class="header">
+                        <h1>This is a headline</h1>
+                        <h2>This is a subhead</h2>
+                    </header>
+                    <section id="body" class="body epic-grid">
+                        <p class="paragraph-1">ZEAL Optics is proud to announce an exciting new contest in partnership with Endurance Corner, world-renowned triathlete and ZEAL Ambassador Justin Daerr and Strava. We are gearing up to get you out and cranking on your bike for the next two weeks, and throwing in the opportunity to win one of six pairs of ZEAL Performance sunglasses as we inspire you to #ExploreMore from your bike’s saddle.</p>
+                        <p class="epic-grid-span-2of3">The competition starts Monday, July 18 and ends July 31. The winners of each category will win a pair of ZEAL Optics Performance sunglasses, designed and tested in the cycling mecca of Boulder, Colorado. ZEAL’s plant-based eyewear, like the city they're created in, are built for life outdoors, to help you push your limits, and tirelessly refined by athletes like Justin Daerr to ensure the road ahead is your only focus.</p>
+                    </section>
+                    <!-- <template is="dom-if" if="[[_hasFooterItems()]]"> -->
+                        <footer id="footer" class="footer">
+                            <!-- <content select="*[footer], footer > *"></content> -->
+                        </footer>
+                    <!-- </template> -->
+                </div>
+            </div>
+            </div>
+          </template>
+
+        </demo-snippet>
+      </div>
+
+
+
+
 
   </body>
 

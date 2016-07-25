@@ -1,0 +1,199 @@
+<dom-module id="epic-modular-scale">
+  <template>
+    <style>
+ :root {
+
+ 	--epic-font-family: "Interstate", Helvetica, Arial, sans-serif;
+    --epic-code-font-family: monospace;
+
+    /* Scale ratios */
+	--augmented-fourth : 1.414;
+	--double-octave : 4;
+	--fifth         : 1.5;
+	--fourth        : 1.333;
+	--golden        : 1.618;
+	--major-eleventh: 2.667;
+	--major-second  : 1.125;
+	--major-seventh : 1.875;
+	--major-sixth   : 1.667;
+	--major-tenth   : 2.5;
+	--major-third   : 1.25;
+	--major-twelfth : 3;
+	--minor-second  : 1.067;
+	--minor-seventh : 1.778;
+	--minor-sixth   : 1.6;
+	--minor-third   : 1.2;
+	--octave        : 2;
+	--phi           : 1.618;
+
+    --epic-type-ratio: var(--augmented-fourth);
+	--epic-base-font-size: 1rem;
+
+	--epic-type-up1: calc(var(--epic-type-ratio) * var(--epic-base-font-size));
+	--epic-type-up2: calc(var(--epic-type-ratio) * var(--epic-type-up1));
+	--epic-type-up3: calc(var(--epic-type-ratio) * var(--epic-type-up2));
+	--epic-type-up4: calc(var(--epic-type-ratio) * var(--epic-type-up3));
+	--epic-type-up5: calc(var(--epic-type-ratio) * var(--epic-type-up4));
+	--epic-type-up6: calc(var(--epic-type-ratio) * var(--epic-type-up5));
+	--epic-type-up7: calc(var(--epic-type-ratio) * var(--epic-type-up6));
+	--epic-type-up8: calc(var(--epic-type-ratio) * var(--epic-type-up7));
+	--epic-type-up9: calc(var(--epic-type-ratio) * var(--epic-type-up8));
+	--epic-type-up10: calc(var(--epic-type-ratio) * var(--epic-type-up9));
+	--epic-type-up11: calc(var(--epic-type-ratio) * var(--epic-type-up10));
+	--epic-type-up12: calc(var(--epic-type-ratio) * var(--epic-type-up11));
+	--epic-type-up13: calc(var(--epic-type-ratio) * var(--epic-type-up12));
+	--epic-type-up14: calc(var(--epic-type-ratio) * var(--epic-type-up13));
+	--epic-type-up15: calc(var(--epic-type-ratio) * var(--epic-type-up14));
+	--epic-type-up16: calc(var(--epic-type-ratio) * var(--epic-type-up15));
+	--epic-type-down1: calc(var(--epic-base-font-size) / var(--epic-type-ratio));
+	--epic-type-down2: calc(var(--epic-type-down1) / var(--epic-type-ratio));
+	--epic-type-down3: calc(var(--epic-type-down2) / var(--epic-type-ratio));
+	--epic-type-down4: calc(var(--epic-type-down3) / var(--epic-type-ratio));
+	--epic-type-down5: calc(var(--epic-type-down4) / var(--epic-type-ratio));
+	--epic-type-down6: calc(var(--epic-type-down5) / var(--epic-type-ratio));
+	--epic-type-down7: calc(var(--epic-type-down6) / var(--epic-type-ratio));
+	--epic-type-down8: calc(var(--epic-type-down7) / var(--epic-type-ratio));
+	--epic-type-down9: calc(var(--epic-type-down8) / var(--epic-type-ratio));
+	--epic-type-down10: calc(var(--epic-type-down9) / var(--epic-type-ratio));
+
+        /* Baseline grid */
+        --epic-baseline-ratio: 1.5;
+        --epic-baseline: calc(var(--epic-base-font-size) * var(--epic-baseline-ratio));
+        --epic-baseline-up1: calc(var(--epic-baseline) * 1);
+        --epic-baseline-up2: calc(var(--epic-baseline) * 2);
+        --epic-baseline-up3: calc(var(--epic-baseline) * 3);
+        --epic-baseline-up4: calc(var(--epic-baseline) * 4);
+        --epic-baseline-up5: calc(var(--epic-baseline) * 5);
+        --epic-baseline-up6: calc(var(--epic-baseline) * 6);
+        --epic-baseline-up7: calc(var(--epic-baseline) * 7);
+        --epic-baseline-up8: calc(var(--epic-baseline) * 8);
+        --epic-baseline-up9: calc(var(--epic-baseline) * 9);
+        --epic-baseline-up10: calc(var(--epic-baseline) * 10);
+        --epic-baseline-up11: calc(var(--epic-baseline) * 11);
+        --epic-baseline-up12: calc(var(--epic-baseline) * 12);
+        --epic-baseline-up13: calc(var(--epic-baseline) * 13);
+        --epic-baseline-up14: calc(var(--epic-baseline) * 14);
+        --epic-baseline-up15: calc(var(--epic-baseline) * 15);
+        --epic-baseline-up16: calc(var(--epic-baseline) * 16);
+        --epic-baseline-up17: calc(var(--epic-baseline) * 17);
+        --epic-baseline-up18: calc(var(--epic-baseline) * 18);
+        --epic-baseline-up19: calc(var(--epic-baseline) * 19);
+        --epic-baseline-up20: calc(var(--epic-baseline) * 20);
+        --epic-baseline-down1: calc(var(--epic-baseline) / 2);
+        --epic-baseline-down2: calc(var(--epic-baseline) / 4);
+
+
+
+        
+
+    --epic-basline-grid-container: {
+  background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+  background-position: left -1px;
+  background-repeat: repeat;
+  background-size: var(--epic-baseline) var(--epic-baseline);
+}
+--epic-basline-grid-lines: {
+  box-shadow: 1px 0px 0px hsla(200, 100%, 50%, .3), -1px 0px 0px hsla(200, 100%, 50%, .3);
+}
+
+    }
+    /*body {
+        font-family: Helvetica,Arial,sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: var(--epic-base-font-size);
+        line-height: var(--epic-base-size);
+        padding: 0;
+        margin: 0 0 var(--epic-base-size);
+    }
+
+    h1, h2, h3 {
+        text-transform: uppercase;
+    }
+
+    h1 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size-4);
+        line-height: var(--epic-base-size-4);
+        margin-top:  0;
+        margin-bottom: var(--epic-base-size);
+    }
+
+    h2 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size-3);
+        line-height: var(--epic-base-size-4);
+        margin-top: var(--epic-base-size);
+        margin-bottom: var(--epic-base-size);
+    };
+
+    h3 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size-2);
+        line-height: var(--epic-base-size-3);
+        margin-top: var(--epic-base-size);
+        margin-bottom: var(--epic-base-size);
+    };
+
+    h4 {
+        font-family: inherit;
+        font-weight: 600;
+        font-style: inherit;
+        font-size: var(--epic-base-font-size);
+        line-height: var(--epic-base-size);
+        margin-top: var(--epic-base-size);
+        margin-bottom: 0;
+    };
+
+    h5 {
+        font-family: inherit;
+        font-weight: 400;
+        font-style: italic;
+        font-size: var(--epic-base-font-size);
+        line-height: var(--epic-base-size);
+        margin-top: var(--epic-base-size);
+        margin-bottom: 0;
+    };
+
+    p,ul,ol,pre,table,blockquote {
+        margin-top: 0;
+        margin-bottom:  var(--epic-base-size);
+    };
+
+    ul ul,ol ol,ul ol,ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+    };
+
+    hr {
+        border: 1px solid;
+        margin: -1px 0;
+    };
+
+    b,strong,em,small,code {
+        line-height: 1;
+    }
+
+    sup {
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+        top: -.5em;
+    }
+
+    sub {
+        bottom: -.25em;
+    }
+
+    a {
+        color: #268ED9;
+    }*/
+    </style>
+  </template>
+</dom-module>

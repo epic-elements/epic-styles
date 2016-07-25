@@ -1,0 +1,120 @@
+<link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="epic-vars.html">
+
+<dom-module id="epic-grid">
+  <template>
+    <style include="epic-vars">
+    :root {
+
+        --epic-grid-gutter-size: var(--epic-base-size);
+        --grid-grid-gutters-size-small: calc(var(--epic-grid-gutter-size) / 2);
+        --grid-grid-gutter-size-large: calc(var(--epic-grid-gutter-size) * 2);
+        --grid-grid-gutter-size-xlarge: calc(var(--epic-grid-gutter-size) * 3);
+
+        --epic-grid-max-width: calc(var(--epic-base-size) * 48);
+
+        --epic-grid-total-columns-small: 4;
+        --epic-grid-total-columns-medium: 8;
+        --epic-grid-total-columns-large: 12;
+
+        --epic-grid-total-columns: var(--epic-grid-total-columns-small);
+
+
+        --epic-grid: {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          /*@apply(--epic-grid-gutters);*/
+      };
+
+        --epic-grid-cell: {
+          flex: 1;
+      };
+
+        --epic-grid-top: {
+          align-items: flex-start;
+        }
+
+        --epic-grid-bottom: {
+          align-items: flex-end;
+        }
+
+        --epic-grid-center: {
+          align-items: center;
+        }
+
+        --epic-grid-justify-center: {
+          justify-content: center;
+        }
+
+        --epic-grid-cell-top: {
+          align-self: flex-start;
+        }
+
+        --epic-grid-cell-bottom: {
+          align-self: flex-end;
+        }
+
+        --epic-grid-cell-center: {
+          align-self: center;
+        }
+
+        --epic-grid-cell-autosize: {
+          flex: none;
+        }
+
+        --epic-grid-cell-fit: {
+          flex: 1;
+      };
+
+        --epic-grid-cell-full: {
+          flex: 0 0 100%;
+      };
+
+        --epic-grid-cell-1of2: {
+          flex: 0 0 50%;
+      };
+
+        --epic-grid-cell-1of3: {
+          flex: 0 0 33.3333%;
+      };
+
+        --epic-grid-cell-1of4: {
+          flex: 0 0 25%;
+      };
+
+
+      --epic-grid-gutters: {
+        margin: calc(var(--epic-grid-gutter-size)*-1) 0 var(--epic-grid-gutter-size) calc(var(--epic-grid-gutter-size)*-1);
+    };
+      --epic-grid-cell-gutters: {
+        padding: var(--epic-grid-gutter-size) 0 0 var(--epic-grid-gutter-size);
+    };
+
+        --epic-grid-gutters-small: {
+          margin: calc(var(--epic-grid-gutter-size-small)*-1) 0 var(--epic-grid-gutter-size-small) calc(var(--epic-grid-gutter-size-small)*-1);
+      };
+        --epic-grid-gutters-cell-small: {
+          padding: var(--epic-grid-gutter-size-small) 0 0 var(--epic-grid-gutter-size-small);
+      };
+
+        --epic-grid-gutters-large: {
+          margin: calc(var(--epic-grid-gutter-size-large)*-1) 0 var(--epic-grid-gutter-size-large) calc(var(--epic-grid-gutter-size-large)*-1);
+      };
+        --epic-grid-gutters-cell-large: {
+          padding: var(--epic-grid-gutter-size-large) 0 0 var(--epic-grid-gutter-size-large);
+      };
+
+        --epic-grid-gutters-xlarge: {
+          margin: calc(var(--epic-grid-gutter-size-xlarge)*-1) 0 var(--epic-grid-gutter-size-xlarge) calc(var(--epic-grid-gutter-size-xlarge)*-1);
+      };
+        --epic-grid-gutters-cell-xlarge: {
+          padding: var(--epic-grid-gutter-size-xlarge) 0 0 var(--epic-grid-gutter-size-xlarge);
+      };
+
+
+
+    }
+    </style>
+  </template>
+</dom-module>

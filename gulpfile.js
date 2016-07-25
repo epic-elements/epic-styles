@@ -10,6 +10,7 @@ var clean = require('gulp-clean');
 var replace = require('gulp-replace');
 var cdnizer = require("gulp-cdnizer");
 var fs = require("fs");
+var sass = require("gulp-sass");
 
 gulp.task('init:rename', function () {
 var element = __dirname.split('/');
@@ -54,3 +55,12 @@ gulp.task('serve', ['js:transpile'], function() {
     gulp.watch('*.es6.js', ['js:transpile']);
     gulp.watch(['*.js', '*.html', '!*.es6.js']).on('change', browserSync.reload);
 });
+
+
+gulp.task("styles", function () {
+        gulp.src(
+            "bower_components/material-design-lite/src/**/*.scss"
+        )
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./material-styles/'));
+    });
